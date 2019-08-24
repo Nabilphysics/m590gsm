@@ -17,3 +17,4 @@ G	> Ground – 0v</br>
 
 Note :</br>
 Connect a 1000uF capacitor between 5V and GND. THIS IS IMPORTANT. </br>
+Generally Default baud rate is 57600
