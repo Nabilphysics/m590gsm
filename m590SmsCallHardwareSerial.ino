@@ -8,8 +8,8 @@ Pinout:
 +5v --  5v power supply in
 GND --  Ground – 0v
 I   --  Ring, Output (Will pulse low for an incoming call or SMS)
-T   --  Transmit (3.3v logic)
-R   --  Receive (3.3v logic)
+T   --  Transmit (3.3v logic) - Arduino Rx(Pin 0)
+R   --  Receive (3.3v logic) - Arduino Tx(Pin 1)
 V   --  Voltage after diode (Around 4.45v – M590 maximum is 4.5v)
 K   --  On/Off (Latched input – Pull low to turn on, pull low again to turn module off)
 G   --  Ground – 0v
@@ -21,12 +21,12 @@ G   --  Ground – 0v
 //https://www.nabilbd.com
 //https://www.cruxbd.com
 #include <string.h>
-char user_num[15]="replace this text with the number";                  //phone number for sending sms
+char user_num[15]="+8801*********";                  //phone number for sending sms
 int i;
 
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(57600);//your baud rate
   delay(10000);// Very Important Delay. Its remove unwanted data at begining
   
  
